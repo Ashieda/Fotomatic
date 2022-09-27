@@ -30,9 +30,9 @@ html {
 }
 
 @media only screen and (max-width: 760px) {
-  .main-content {
+  /* .main-content {
     top: 2.5625rem;
-  }
+  } */
 }
 
 /* Header */
@@ -61,6 +61,7 @@ header .logo {
 
 header nav ul {
   display: flex;
+  list-style-type: none;
 }
 
 nav li {
@@ -84,8 +85,57 @@ header .mobile {
   display: none;
 }
 
+header .tablet {
+  display: none;
+}
+
 @media only screen and (max-width: 760px) {
   header .desktop {
+    display: none;
+  }
+
+  header .tablet {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile {
+    display: none;
+  }
+  
+  header .content {
+    padding: auto;
+  }
+
+  header .tablet ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .tablet li {
+    padding: 0;
+  }
+
+  header nav ul {
+    padding: 1rem;
+  }
+
+  header .tablet .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .tablet {
     display: none;
   }
 
@@ -128,6 +178,7 @@ header .mobile {
   padding-bottom: 170px; */
   background-image: url("../images/banner-landingpage.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #sign-up-cta {
@@ -293,13 +344,19 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #features-section {
-    flex-flow: column;
     padding: 0;
   }
 
   .feature {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #features-section {
+    flex-flow: column;
+    padding: 0;
   }
 }
 
