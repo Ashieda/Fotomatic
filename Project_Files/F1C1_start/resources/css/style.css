@@ -389,10 +389,11 @@ header .tablet {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  font-size: 0;
 }
 
 #filters-section .image-container {
-  width: 24.8%;
+  width: 25%;
   display: inline-block;
 }
 
@@ -421,6 +422,10 @@ header .tablet {
     padding: 0;
   }
 
+
+}
+
+@media only screen and (max-width: 480px) {
   #filters-section .extra {
     display: none;
   }
